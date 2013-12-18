@@ -7,7 +7,7 @@ A simple Node.js tool that calculates the "shuffle cycle period" for a specified
 
 Calculate the Shuffle Cycle Period for a specific number of cards.
 
-  * ```{numberOfCards}``` - the number of cards in the deck to be shuffled.
+  * `{numberOfCards}` - the number of cards in the deck to be shuffled.
 
 The Shuffle Cycle is defined as
 
@@ -20,5 +20,5 @@ The Shuffle Cycle Period is the number of rounds required to return to the origi
 
   - step 4. Pick up the deck from the table and repeat steps 1-3 until the deck is in the original order.
 
-This command line tool shuffles a deck with the specified ```{numberOfCards}``` once. And then, counts how many times
+This command line tool shuffles a deck with the specified `{numberOfCards}` once. And then, counts how many times
 it takes *using the same shuffle pattern* to return the deck of cards to its original order.
