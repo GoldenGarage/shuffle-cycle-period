@@ -1,9 +1,11 @@
 #!/usr/bin/env /usr/local/bin/node
 // ====================================================================================================================
 //
-// shuffle {numberOfCards}
+// shuffle-cycle-period {numberOfCards}
 //
-// calculate Shuffle Cycle Period for a specific number of cards
+// Calculate the Shuffle Cycle Period for a specific number of cards.
+//
+//   {numberOfCards} - the number of cards in the deck to be shuffled.
 //
 // The Shuffle Cycle is defined as
 //
@@ -24,7 +26,7 @@
 
 // main function (called from bottom of file)
 
-function main( args )
+function main()
 {
     // ... take a number of cards in the deck as a command line argument ..............................................
 
@@ -50,7 +52,7 @@ function main( args )
     // ... step 4. Pick up the deck from the table and repeat steps 1-3 until the deck is in the original order. ......
 
     hand  = table;                                                               // pick up deck from the table
-    table = new Deck();                                                          // the table is now empty
+    table = Deck.create( 0 );                                                    // the table is now empty
 
     var rounds = 0;                                                              // initialize round counter
 
@@ -61,7 +63,7 @@ function main( args )
         shuffleCards( hand, table );                                             // shuffle from hand to table
 
         hand = table;                                                            // pick up deck from the table
-        table = new Deck();                                                      // the table is now empty
+        table = Deck.create( 0 );                                                // the table is now empty
     }
 
 
